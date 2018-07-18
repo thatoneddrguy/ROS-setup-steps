@@ -49,3 +49,12 @@ cd ~/catkin_ws/src/<project>
 git add src
 git commit -m "<msg>"
 git push origin master
+
+(new local repo:)
+cd <...>
+git init
+git add <files>
+git remote add origin <url from creating remote repo>
+    - git remote set-url origin <url> if url was messed up
+git commit -m "<msg>"
+git push -u origin master
