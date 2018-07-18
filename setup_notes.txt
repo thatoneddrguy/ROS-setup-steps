@@ -1,0 +1,51 @@
+create catkin workspace:
+source /opt/ros/melodic/setup.bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+
+===============================================================================
+
+create package within workspace:
+
+cd ~/catkin_ws/src
+catkin_create_pkg <pkg_name> <dependencies, i.e. std_msgs rospy roscpp>
+
+===============================================================================
+
+create and execute:
+
+(in workspace folder, i.e. catkin_ws)
+(modify CMakeLists.txt in src/<pkg_name>)
+source devel/setup.bash
+	- (I think this only needs to be run once per terminal window...?)
+catkin_make
+rosrun <name_of_executable>
+
+===============================================================================
+
+running turtlesim:
+
+rosrun turtlesim turtlesim_node
+rosrun turtlesim turtle_teleop_key
+
+===============================================================================
+
+running roscore:
+
+roscore
+
+===============================================================================
+
+kill everything:
+
+killall -9 rosmaster
+
+===============================================================================
+
+github:
+
+cd ~/catkin_ws/src/<project>
+git add src
+git commit -m "<msg>"
+git push origin master
