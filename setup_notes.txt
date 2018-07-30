@@ -38,6 +38,10 @@ rosrun turtlesim turtle_teleop_key
 running roscore:
 
 roscore
+(If you just want to run tests on your local machine (like to run the ROS Tutorials), set these environment variables:
+
+$ export ROS_HOSTNAME=localhost
+$ export ROS_MASTER_URI=http://localhost:11311)
 
 ===============================================================================
 
